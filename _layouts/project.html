@@ -1,0 +1,86 @@
+---
+layout: page
+---
+
+{% capture color %}
+{% case page.project.status %}
+  {% when "experimental" %}
+     rgb(255,48,32)
+  {% when "beta" %}
+     rgb(96,128,224)
+  {% when "stable" %}
+     rgb(64,192,64)
+  {% when "obsolete" %}
+  	 rgb(0,0,0)
+  {% else %}
+     rgb(154,154,154)
+{% endcase %}
+{% endcapture %}
+
+<table style="float: right; background-color: white; width:280px; border: 2px solid {{ color }}; border-collapse: collapse; margin:0 0 0.5em 0.5em;">
+
+	<tbody>
+		<tr style="background-color: {{ color }}; color:white; text-align:left;">
+			<th colspan="2" style="padding-top: 0.5em; padding-left:12px; background-color: {{ color }};"><span style="font-size: 130%;">{{ page.project.name }}</span><br />
+				<p>Release status: {{ page.project.status }}</p>
+			</th>
+		</tr>
+		{% if page.project.image %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td colspan="2" style="text-align: center; padding: 12px;"><a href="{{ page.project.image }}" class="image"><img alt="{{ page.project.image }}" src="{{ page.project.image }}" decoding="async" width="220"
+					 {% comment %}height="165"{% endcomment %}/></a>
+			</td>
+		</tr>
+		{% endif %}
+
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Description</b></td>
+			<td>{{ page.project.description | markdownify | remove: "<p>" | remove: "</p>" }}
+			</td>
+		</tr>
+
+		{% if page.project.version %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Last Version</b>&#160;
+			</td>
+			<td>{{ page.project.version }}&#160;<sup>({{ page.project.update }})</sup>
+			</td>
+		</tr>
+		{% endif %}
+
+		{% if page.project.platform %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Platform</b>&#160;
+			</td>
+			<td>{{ page.project.platform }}</td>
+		</tr>
+		{% endif %}
+
+		{% if page.project.license %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>License</b>&#160;
+			</td>
+			<td>{{ page.project.license }}</td>
+		</tr>
+		{% endif %}
+
+		{% if page.project.download %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Download</b>&#160;
+			</td>
+			<td>{{ page.project.download | markdownify | remove: "<p>" | remove: "</p>" }}</td>
+		</tr>
+		{% endif %}
+
+		{% if page.project.shop %}
+		<tr style="border-bottom:1px solid #F0F0F0;">
+			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Shop</b>&#160;
+			</td>
+			<td>{{ page.project.shop | markdownify | remove: "<p>" | remove: "</p>" }}</td>
+		</tr>
+		{% endif %}
+	</tbody>
+</table>
+
+
+{{ content }}
