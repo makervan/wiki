@@ -10,9 +10,9 @@ project:
   description: Synthesizer development board, powered by an Arduino Pro Mini
   author:
   username:
-  version: 0.2
-  update: 2019-10-22
-  platform: Arduino ProMini
+  version: 0.1
+  update: 2017-08-06
+  platform: Arduino Pro Mini
   license: CC BY-SA 4.0
   download: "[GitHub](https://github.com/makervan/synthiboard)"
   shop: "[Tindie](https://www.tindie.com/products/makervan/synthiboard/)"
