@@ -1,0 +1,8 @@
+---
+layout: none
+---
+User-agent: *
+Disallow: /impressum
+Disallow: /privacy
+
+Sitemap: {{ site.url }}/sitemap.xml

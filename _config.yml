@@ -24,15 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   MakerVan Labs is a small one-person electronics lab and
   kit factory based out of Munich, Germany.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wiki.makervan.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tiefpunkt
-github_username:  tiefpunkt
+github_username:  makervan
 
 # Build settings
 theme: minima
 #remote_theme: bogoli/-folio
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 header_pages:
   - about.md
