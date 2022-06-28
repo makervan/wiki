@@ -7,6 +7,8 @@ permalink: /wiki/PunkSeq10
 -   [Build video](https://www.youtube.com/watch?v=XrldbxjWpcs)
 -   [Schematics and gerbers](http://41j.com/blog/2016/04/punkseq10-schematics-and-gerbers/)
 
+{% include image-gallery.html folder="/images/apc_sequencer" %}
+
 ## Parts
 
 | Part of Circuit | Part Number                           | Distributor                                                                                                                                                                          | Amount |
@@ -23,8 +25,8 @@ permalink: /wiki/PunkSeq10
 | LED             | 5mm blue                              | [mouser](https://www.mouser.de/ProductDetail/Cree-Inc/C503B-BCN-CV0Z0461/?qs=sGAEpiMZZMuCm2JlHBGefrcINkf5ZrI4HyOKnejs9Ss%3d)                                                         | 10     |
 | Capacitors...   |                                       |                                                                                                                                                                                      |        |
 
-### Atari Punk Console
+## Atari Punk Console
 
 Just the noise, without the sequencer
-
+![Plain APC](/images/plain_apc.jpg){: style="float:right; width:200px;"}
 -   <http://41j.com/blog/2015/10/atari-punk-console-rev3/>
