@@ -4,6 +4,9 @@
 
 layout: page
 ---
+
+![MakerVan Logo](/images/logo.png){:style="float: right;"}
+
 MakerVan Labs is a small one-person electronics lab and
 kit factory based out of Munich, Germany, focussed on open hardware projects. [more...](/about/)
 
