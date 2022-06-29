@@ -48,6 +48,11 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 Follow me on [twitter](https://twitter.com/tiefpunkt) and
 [instagram](https://www.instagram.com/that_severin/).
 
+Some projects are also documented all around the web. There are links on the specific project pages, but you can also check out some overviews here:
+
+* [hackaday.io](https://hackaday.io/projects/hacker/5309)
+* [hackster.io](https://www.hackster.io/tiefpunkt)
+
 ## Support the Labs
 
 -   Check out out [Tindie Store](https://www.tindie.com/stores/makervan/)
