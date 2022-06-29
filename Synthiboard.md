@@ -16,6 +16,9 @@ project:
   license: CC BY-SA 4.0
   download: "[GitHub](https://github.com/makervan/synthiboard)"
   shop: "[Tindie](https://www.tindie.com/products/makervan/synthiboard/)"
+  social:
+    hackaday: https://hackaday.io/project/177597-synthiboard
+    github: https://github.com/makervan/synthiboard
 ---
 <img src="/images/synthiboard/Synthiboard_picture.jpg" title="Synthiboard_picture.jpg"
 width="400" alt="Synthiboard_picture.jpg" />

@@ -79,6 +79,33 @@ layout: page
 			<td>{{ page.project.shop | markdownify | remove: "<p>" | remove: "</p>" }}</td>
 		</tr>
 		{% endif %}
+
+        {% if page.project.social %}
+        <tr style="border-bottom:1px solid #F0F0F0;">
+            <td colspan="2" style="padding-top: 0.5em; padding-left:12px; text-align: center;">
+                {% if page.project.social.hackster %}
+                    <a href="{{ page.project.social.hackster }}">
+                        <img src="/images/hackster.png" style="width:32px;" alt="{{ page.project.name }} on hackster.io">
+                    </a>
+                {% endif %}
+                {% if page.project.social.hackaday %}
+                    <a href="{{ page.project.social.hackaday }}">
+                        <img src="/images/hackaday.ico" style="width:32px;" alt="{{ page.project.name }} on hackaday.io">
+                    </a>
+                {% endif %}
+                {% if page.project.social.e14 %}
+                    <a href="{{ page.project.social.e14 }}">
+                        <img src="/images/e14.ico" style="width:32px;" alt="{{ page.project.name }} on element14">
+                    </a>
+                {% endif %}
+                {% if page.project.social.github %}
+                    <a href="{{ page.project.social.github }}">
+                        <img src="/images/github.svg" style="width:32px;" alt="{{ page.project.name }} on GitHub">
+                    </a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endif %}
 	</tbody>
 </table>
 

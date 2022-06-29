@@ -12,6 +12,8 @@ project:
   download: "[GitHub (PCB)](https://github.com/makervan/minipops), [Firmware](https://gist.github.com/anonymous/c85c864c337501680505/)"
   status: 'stable'
   image: /images/minipops/Minipops01.jpg
+  social:
+    hackster: https://www.hackster.io/tiefpunkt/minipops-rhythm-box-390848
 ---
 
 PCB for Jan Ost's O2 Synth

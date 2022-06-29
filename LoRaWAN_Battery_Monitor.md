@@ -15,7 +15,9 @@ project:
   platform: ATMega328
   license: CC BY-SA 4.0
   download:
-  shop: 
+  shop:
+  social:
+    hackaday: https://hackaday.io/project/176914-lorawan-battery-pack-monitor
 ---
 The **LoRaWAN Battery Monitor** is a LoRaWAN connected device based on
 the [ATMega328 LoRaWAN Node](/wiki/ATMega328_LoRaWAN_Node) to
