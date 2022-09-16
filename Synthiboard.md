@@ -8,8 +8,6 @@ project:
   status: stable
   image: /images/synthiboard/Synthiboard_picture.jpg
   description: Synthesizer development board, powered by an Arduino Pro Mini
-  author:
-  username:
   version: 0.1
   update: 2017-08-06
   platform: Arduino Pro Mini
@@ -262,18 +260,19 @@ R2R DAC, or a dedicated DAC IC.
 > different ways.
 
 -   [Demo video](https://www.youtube.com/watch?v=M0V9ygb5y1E)
--   [Explanation of different
-    modes](https://drive.google.com/drive/folders/199UJIC_pPivkI-eqt9KlU8keMBXIYhHy)
--   [Firmware source on Google
-    Drive](https://drive.google.com/drive/folders/18lSqx8nkNqKk9YikhkYc8TYXYAGtC2VJ)
-    -   [Code release post on
-        reddit](https://www.reddit.com/r/modular/comments/9txhe9/ellitone_multisynth_firmware_released_as_open/)
-    -   [GitHub
-        mirror](https://github.com/Tolsi/Ellitone-Multi-Synth-Firmware)
+-   [Explanation of different modes](https://drive.google.com/drive/folders/199UJIC_pPivkI-eqt9KlU8keMBXIYhHy)
+-   [Firmware source on Google Drive](https://drive.google.com/drive/folders/18lSqx8nkNqKk9YikhkYc8TYXYAGtC2VJ)
+    -   [Code release post on reddit](https://www.reddit.com/r/modular/comments/9txhe9/ellitone_multisynth_firmware_released_as_open/)
+    -   [GitHub mirror](https://github.com/Tolsi/Ellitone-Multi-Synth-Firmware)
 
 Uses Mozzi library, which uses the "wrong" audio output pin. So it won't
 work out of the box, but I'll give it a shot, and I've been thinking
 about a new hardware revision to address this.
+
+#### BleepDrum
+* [DrumSynth by BleepLabs](https://bleeplabs.com/product/the-bleep-drum/)
+* [Source Code](https://github.com/BleepLabs/Bleep-Drum)
+* [Other BleepLabs Synths, e.g. Nebulophone](https://bleeplabs.com/devices/)
 
 ### PCB redesign
 
