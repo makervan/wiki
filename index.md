@@ -33,6 +33,8 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 
 -   [Minipops](/wiki/Minipops)
 -   [Internet of Plants](/wiki/Internet_of_Plants)
+-   [Video Synthesizers](/wiki/Video_Synthesizers)
+
 
 ## Projects supported by the MakerVan Labs
 
