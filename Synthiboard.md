@@ -274,6 +274,13 @@ about a new hardware revision to address this.
 * [Source Code](https://github.com/BleepLabs/Bleep-Drum)
 * [Other BleepLabs Synths, e.g. Nebulophone](https://bleeplabs.com/devices/)
 
+#### Mozzi Examples
+The Mozzi library has some examples that might be worthwhile to take a look at:
+* <https://github.com/todbot/mozzi_experiments/blob/main/eighties_arp_uno/eighties_arp_uno.ino>
+
+Also there are loads of other synths using Mozzi:
+* [Arduino Atari Punk Synth](https://hackaday.io/project/170679-arduino-atari-punk-synth)
+
 ### PCB redesign
 
 -   Straight ATmega328 instead of ProMini board
@@ -282,6 +289,9 @@ about a new hardware revision to address this.
     -   more trouble than it is worth
 -   Battery power (3\* AA)
 -   Add option for different PWM pin, to support more synth sketches
+-   MIDI in, e.g. via 3.5mm jack (TRS): [A simplified guide to TRS MIDI](https://minimidi.world/)
+    -  Use existing 3.5mm jacks, add pinout for optocoupler chip?
+- Version using the RPi2040
 
 ## References
 
@@ -289,3 +299,4 @@ about a new hardware revision to address this.
 
 -   [Rachel's Nightmare](https://hackaday.io/project/160042-rachels-nightmare-a-distributed-polyphonic-synth)
 -   [Electronic Instrument Toolkit](https://hackaday.io/project/9842-electronic-instrument-toolkit)
+-   [Wee Noise Maker](https://hackaday.io/project/19326-wee-noise-maker) ([GitHub Repo](https://github.com/Fabien-Chouteau/Wee-Noise-Maker), [Blog Post](https://fabien-chouteau.github.io/Wee-Noise-Maker/))
