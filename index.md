@@ -29,6 +29,7 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 -   [MicroGrid Power Meter LoRaWAN connector](/wiki/MicroGrid_Power_Meter_LoRaWAN_connector) -
     work in progress
 -   [WiFi LCD Display](/wiki/wifi_lcd_display) - work in progress
+-   [WiFi Button](/wiki/wifi_button) - research phase
 
 <!-- -->
 
