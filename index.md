@@ -12,15 +12,10 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 
 ## Projects
 
--   [ProMini LoRaWAN Node](/wiki/ProMini_LoRaWAN_Node) - for
-    sale on
-    [tindie](https://www.tindie.com/products/makervan/promini-lorawan-node-pcb/)
--   [Synthiboard](/wiki/Synthiboard) - for sale on
-    [tindie](https://www.tindie.com/products/makervan/synthiboard/)
--   [MatrixMix](/wiki/MatrixMix) - for sale on
-    [tindie](https://www.tindie.com/products/makervan/matrixmix-4x4-matrix-audio-mixer/)
--   [Powerhub XT60](/wiki/Powerhub_XT60) - for sale on
-    [tindie](https://www.tindie.com/products/makervan/powerhub-xt60/)
+-   [ProMini LoRaWAN Node](/wiki/ProMini_LoRaWAN_Node) - for sale on  [tindie](https://www.tindie.com/products/makervan/promini-lorawan-node-pcb/)
+-   [Synthiboard](/wiki/Synthiboard) - for sale on [tindie](https://www.tindie.com/products/makervan/synthiboard/)
+-   [MatrixMix](/wiki/MatrixMix) - for sale on [tindie](https://www.tindie.com/products/makervan/matrixmix-4x4-matrix-audio-mixer/)
+-   [Powerhub XT60](/wiki/Powerhub_XT60) - for sale on [tindie](https://www.tindie.com/products/makervan/powerhub-xt60/)
 
 <!-- -->
 
@@ -72,3 +67,6 @@ Some projects are also documented all around the web. There are links on the spe
 
 - [8Bit Mixtape](/wiki/8Bit_Mixtape)
 - [PunkSeq10](/wiki/PunkSeq10)
+- [0-5V Sequencer](https://wiki.munichmakerlab.de/wiki/Archive:Sequencer)
+- [LED Moving Heads](https://wiki.munichmakerlab.de/wiki/Archive:LED_Moving_Heads)
+- [Arduino Retro Videogame Console](https://wiki.munichmakerlab.de/wiki/Archive:Arduino_Retro_Videogame_Console)
