@@ -30,8 +30,9 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 
 <!-- -->
 
-- [MicroGrid Connection Unit](/wiki/MicroGrid_Connection_Unit) - exprimental
+- [MicroGrid Connection Unit](/wiki/MicroGrid_Connection_Unit) - experimental
 - [Power Distribution](/wiki/Power_Distribution) - research
+- [HeadPhono](/wiki/HeadPhono) - research
 
 <!-- -->
 

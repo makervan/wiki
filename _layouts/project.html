@@ -1,113 +1,155 @@
 ---
-layout: page
+layout: default
 ---
 
 {% capture color %}
 {% case page.project.status %}
-  {% when "experimental" %}
-     rgb(255,48,32)
-  {% when "beta" %}
-     rgb(96,128,224)
-  {% when "stable" %}
-     rgb(64,192,64)
-  {% when "obsolete" %}
-  	 rgb(0,0,0)
-  {% else %}
-     rgb(154,154,154)
+{% when "experimental" %}
+rgb(255,48,32)
+{% when "beta" %}
+rgb(96,128,224)
+{% when "stable" %}
+rgb(64,192,64)
+{% when "obsolete" %}
+rgb(0,0,0)
+{% else %}
+rgb(154,154,154)
 {% endcase %}
 {% endcapture %}
 
-<table style="float: right; background-color: white; width:280px; border: 2px solid {{ color }}; border-collapse: collapse; margin:0 0 0.5em 0.5em;">
+<article class="post">
 
-	<tbody>
-		<tr style="background-color: {{ color }}; color:white; text-align:left;">
-			<th colspan="2" style="padding-top: 0.5em; padding-left:12px; background-color: {{ color }};"><span style="font-size: 130%;">{{ page.project.name }}</span><br />
-				<p>Release status: {{ page.project.status }}</p>
-			</th>
-		</tr>
-		{% if page.project.image %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td colspan="2" style="text-align: center; padding: 12px;"><a href="{{ page.project.image }}" class="image"><img alt="{{ page.project.image }}" src="{{ page.project.image }}" decoding="async" width="220"
-					 {% comment %}height="165"{% endcomment %}/></a>
-			</td>
-		</tr>
-		{% endif %}
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title | escape }}</h1>
+		<div class="post-meta">
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			{% assign pdate = page.date | date_to_xmlschema %}
+			{%- if page.date and page.modified_date %}<span class="meta-label">Published:</span>{% endif %}
+			<time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
+				{{ pdate | date: date_format }}
+			</time>
+			{%- if page.modified_date -%}
+			{%- if page.date  -%}
+				<span class="bullet-divider">•</span>
+			{%- endif -%}
+			<span class="meta-label">Updated:</span>
+			{%- assign mdate = page.modified_date | date_to_xmlschema %}
+			<time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+				{{ mdate | date: date_format }}
+			</time>
+			{%- endif -%}
+			{%- if page.author %}
+			<div class="{% unless page.modified_date %}force-inline {% endunless %}post-authors">
+				{%- for author in page.author %}
+				<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+					<span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+				{%- if forloop.last == false %}, {% endif -%}
+				{% endfor %}
+			</div>
+			{%- endif %}
+		</div>
+	</header>
 
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Description</b></td>
-			<td>{{ page.project.description | markdownify | remove: "<p>" | remove: "</p>" }}
-			</td>
-		</tr>
+	<div class="post-content">
+		<table
+			style="float: right; background-color: white; width:280px; border: 2px solid {{ color }}; border-collapse: collapse; margin:0 0 0.5em 0.5em;">
 
-		{% if page.project.version %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Last Version</b>&#160;
-			</td>
-			<td>{{ page.project.version }}&#160;<sup>({{ page.project.update }})</sup>
-			</td>
-		</tr>
-		{% endif %}
+			<tbody>
+				<tr style="background-color: {{ color }}; color:white; text-align:left;">
+					<th colspan="2" style="padding-top: 0.5em; padding-left:12px; background-color: {{ color }};"><span
+							style="font-size: 130%;">{{ page.project.name }}</span><br />
+						<p>Release status: {{ page.project.status }}</p>
+					</th>
+				</tr>
+				{% if page.project.image %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td colspan="2" style="text-align: center; padding: 12px;"><a href="{{ page.project.image }}"
+							class="image"><img alt="{{ page.project.image }}" src="{{ page.project.image }}"
+								decoding="async" width="220" {% comment %}height="165" {% endcomment %} /></a>
+					</td>
+				</tr>
+				{% endif %}
 
-		{% if page.project.platform %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Platform</b>&#160;
-			</td>
-			<td>{{ page.project.platform }}</td>
-		</tr>
-		{% endif %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Description</b></td>
+					<td>{{ page.project.description | markdownify | remove: "<p>" | remove: "</p>" }}
+					</td>
+				</tr>
 
-		{% if page.project.license %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>License</b>&#160;
-			</td>
-			<td>{{ page.project.license }}</td>
-		</tr>
-		{% endif %}
+				{% if page.project.version %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Last Version</b>&#160;
+					</td>
+					<td>{{ page.project.version }}&#160;<sup>({{ page.project.update }})</sup>
+					</td>
+				</tr>
+				{% endif %}
 
-		{% if page.project.download %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Download</b>&#160;
-			</td>
-			<td>{{ page.project.download | markdownify | remove: "<p>" | remove: "</p>" }}</td>
-		</tr>
-		{% endif %}
+				{% if page.project.platform %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Platform</b>&#160;
+					</td>
+					<td>{{ page.project.platform }}</td>
+				</tr>
+				{% endif %}
 
-		{% if page.project.shop %}
-		<tr style="border-bottom:1px solid #F0F0F0;">
-			<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Shop</b>&#160;
-			</td>
-			<td>{{ page.project.shop | markdownify | remove: "<p>" | remove: "</p>" }}</td>
-		</tr>
-		{% endif %}
+				{% if page.project.license %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>License</b>&#160;
+					</td>
+					<td>{{ page.project.license }}</td>
+				</tr>
+				{% endif %}
 
-        {% if page.project.social %}
-        <tr style="border-bottom:1px solid #F0F0F0;">
-            <td colspan="2" style="padding-top: 0.5em; padding-left:12px; text-align: center;">
-                {% if page.project.social.hackster %}
-                    <a href="{{ page.project.social.hackster }}">
-                        <img src="/images/hackster.png" style="width:32px;" alt="{{ page.project.name }} on hackster.io">
-                    </a>
-                {% endif %}
-                {% if page.project.social.hackaday %}
-                    <a href="{{ page.project.social.hackaday }}">
-                        <img src="/images/hackaday.ico" style="width:32px;" alt="{{ page.project.name }} on hackaday.io">
-                    </a>
-                {% endif %}
-                {% if page.project.social.e14 %}
-                    <a href="{{ page.project.social.e14 }}">
-                        <img src="/images/e14.ico" style="width:32px;" alt="{{ page.project.name }} on element14">
-                    </a>
-                {% endif %}
-                {% if page.project.social.github %}
-                    <a href="{{ page.project.social.github }}">
-                        <img src="/images/github.svg" style="width:32px;" alt="{{ page.project.name }} on GitHub">
-                    </a>
-                {% endif %}
-            </td>
-        </tr>
-        {% endif %}
-	</tbody>
-</table>
+				{% if page.project.download %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Download</b>&#160;
+					</td>
+					<td>{{ page.project.download | markdownify | remove: "<p>" | remove: "</p>" }}</td>
+				</tr>
+				{% endif %}
+
+				{% if page.project.shop %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td style="vertical-align: top; padding:0.2em 0.5em;"><b>Shop</b>&#160;
+					</td>
+					<td>{{ page.project.shop | markdownify | remove: "<p>" | remove: "</p>" }}</td>
+				</tr>
+				{% endif %}
+
+				{% if page.project.social %}
+				<tr style="border-bottom:1px solid #F0F0F0;">
+					<td colspan="2" style="padding-top: 0.5em; padding-left:12px; text-align: center;">
+						{% if page.project.social.hackster %}
+						<a href="{{ page.project.social.hackster }}">
+							<img src="/images/hackster.png" style="width:32px;"
+								alt="{{ page.project.name }} on hackster.io">
+						</a>
+						{% endif %}
+						{% if page.project.social.hackaday %}
+						<a href="{{ page.project.social.hackaday }}">
+							<img src="/images/hackaday.ico" style="width:32px;"
+								alt="{{ page.project.name }} on hackaday.io">
+						</a>
+						{% endif %}
+						{% if page.project.social.e14 %}
+						<a href="{{ page.project.social.e14 }}">
+							<img src="/images/e14.ico" style="width:32px;" alt="{{ page.project.name }} on element14">
+						</a>
+						{% endif %}
+						{% if page.project.social.github %}
+						<a href="{{ page.project.social.github }}">
+							<img src="/images/github.svg" style="width:32px;" alt="{{ page.project.name }} on GitHub">
+						</a>
+						{% endif %}
+					</td>
+				</tr>
+				{% endif %}
+			</tbody>
+		</table>
 
 
-{{ content }}
+		{{ content }}
+	</div>
+
+</article>
