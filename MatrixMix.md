@@ -5,17 +5,17 @@ permalink: /wiki/MatrixMix
 
 project:
   name: MatrixMix 4x4
-  status: beta
+  status: stable
   image: /images/matrixmix/Matrixmix02.jpg
   description: A simple yet extendable matrix mixer
   author:
   username:
-  version: 0.2
-  update: 2021-02-17
+  version: 0.3
+  update: 2022-02-22
   platform:
-  license:
+  license: CC BY-SA 4.0 (hw & docs)
   download: "[GitHub Repo](https://github.com/makervan/matrixmix)"
-  shop:
+  shop: "[Lectronz](https://lectronz.com/products/matrixmix-4x4-matrix-audio-mixer), [tindie](https://www.tindie.com/products/makervan/matrixmix-4x4-matrix-audio-mixer/)"
 ---
 
 A simple passive 4x4 matrix mixer. Extendable, and with sync
@@ -104,10 +104,15 @@ href="https://www.taydaelectronics.com/resistors/1-8w-metal-film-resistors/r-10k
 </tbody>
 </table>
 
-You can populate P1-P8 with 3-pin 2.54mm headers, and mix the two
+You can populate P1-P8 with 3/4-pin 2.54mm headers, and mix the two
 channels of a stereo plug together, or pipe the second channel through
 to other devices, in a mode compatible with the Pocket Operator synths
-or similar modules.
+or similar modules. Here's the different modes explained:
+
+* No jumper means the second channel on the input jack is simply ignored.
+* In the bottom position, the second channel on the input and output jacks is connected to a shared bus, which allows you to use the "sync" functionality between different devices that support it, like the Pocket Operators
+* The the middle position on the four pin headers / top position on the three pin headers, both channels on the jack are connected together into the mixer channel. So for Inputs, L+R are combined into one Mono Channel. For the output, the same signal is sent to L+R.
+* On the four pin headers, the top position allows you to work with a true stereo signal. If you place the jumper in the top position on channel 1, and no jumper on channel two, you can put a true stereo signal into Input Jack 2, and the two signals will be routed to mixer channel 1 and 2 separate from each other. Same logic for channel 3+4, and the outputs as well.
 
 Connectors P9 and P10 can be used to connect multiple MatrixMix 4x4
 boards together to create a matrix mixer with 8, 12 or even more inputs.

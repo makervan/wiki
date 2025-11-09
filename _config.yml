@@ -23,6 +23,8 @@ email: hello@makervan.de
 description: >- # this means to ignore newlines until "baseurl:"
   MakerVan Labs is a small one-person electronics lab and
   kit factory based out of Munich, Germany.
+
+  All content is licensed under CC BY-SA 4.0 (unless noted otherwise).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wiki.makervan.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tiefpunkt
