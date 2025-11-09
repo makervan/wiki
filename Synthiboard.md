@@ -288,6 +288,7 @@ Also there are loads of other synths using Mozzi:
 -   remove the USB port
     -   more trouble than it is worth
 -   Battery power (3\* AA)
+    -   Also add reverse polarity protection to the DC input jack
 -   Add option for different PWM pin, to support more synth sketches
 -   MIDI in, e.g. via 3.5mm jack (TRS): [A simplified guide to TRS MIDI](https://minimidi.world/)
     -  Use existing 3.5mm jacks, add pinout for optocoupler chip?

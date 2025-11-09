@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
+title: Welcome to MakerVan Labs
 ---
 
 ![MakerVan Logo](/images/logo.png){:style="float: right;"}
@@ -19,12 +20,18 @@ kit factory based out of Munich, Germany, focussed on open hardware projects. [m
 
 <!-- -->
 
+-   [Powerhub XT90](/wiki/Powerhub_XT90) - work in progress
 -   [ATMega328 LoRaWAN Node](/wiki/ATMega328_LoRaWAN_Node) - work in progress
 -   [LoRaWAN Battery Monitor](/wiki/LoRaWAN_Battery_Monitor) - work in progress
 -   [MicroGrid Power Meter LoRaWAN connector](/wiki/MicroGrid_Power_Meter_LoRaWAN_connector) -
     work in progress
 -   [WiFi LCD Display](/wiki/wifi_lcd_display) - work in progress
 -   [WiFi Button](/wiki/wifi_button) - research phase
+
+<!-- -->
+
+- [MicroGrid Connection Unit](/wiki/MicroGrid_Connection_Unit) - exprimental
+- [Power Distribution](/wiki/Power_Distribution) - research
 
 <!-- -->
 

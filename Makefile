@@ -1,4 +1,7 @@
-.PHONY: deploy
+.PHONY: deploy serve
+
+serve:
+	bundle exec jekyll serve
 
 _site: *.md _layouts
 	bundle exec jekyll build
